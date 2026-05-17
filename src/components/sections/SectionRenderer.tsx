@@ -32,7 +32,6 @@ export function SectionRenderer({ section }: SectionRendererProps) {
 
   return (
     <SectionErrorBoundary sectionId={section.id}>
-      {/* eslint-disable-next-line react-hooks/static-components */}
       {createElement(Resolved, {
         props: validation.data.props,
         sectionId: section.id,
