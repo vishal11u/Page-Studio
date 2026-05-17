@@ -30,13 +30,13 @@ export function StudioClient({ initialPage, role }: StudioClientProps) {
     <>
       <section className="flex min-h-[calc(100vh-57px)]">
         <StudioSidebar role={role} />
-        <main id="main-content" className="flex-1 overflow-y-auto" aria-label="Live draft preview">
-          <header className="border-b border-border px-6 py-3">
-            <p className="text-lg font-semibold">{page.title}</p>
+        <div id="main-content" role="main" className="flex-1 overflow-y-auto" aria-label="Live draft preview">
+          <div className="border-b border-border px-6 py-3">
+            <h1 className="text-lg font-semibold">{page.title}</h1>
             <p className="text-xs text-muted-foreground">Draft preview — changes reflect immediately</p>
-          </header>
+          </div>
           <PageRenderer page={page} />
-        </main>
+        </div>
       </section>
       <PublishModal />
     </>

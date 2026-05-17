@@ -23,15 +23,15 @@ export default async function PreviewPage({ params, searchParams }: PreviewPageP
   return (
     <>
       <AppHeader role={session.role} />
-      <main id="main-content" className="min-h-screen">
-        <header className="border-b border-border px-6 py-4">
-          <p className="text-2xl font-bold">{page.title}</p>
+      <div id="main-content" role="main" className="min-h-screen">
+        <div className="border-b border-border px-6 py-4">
+          <h1 className="text-2xl font-bold">{page.title}</h1>
           <p className="text-sm text-muted-foreground">
             Preview · {mode === 'preview' ? 'Contentful preview' : 'published'} mode
           </p>
-        </header>
+        </div>
         <PageRenderer page={page} />
-      </main>
+      </div>
     </>
   );
 }

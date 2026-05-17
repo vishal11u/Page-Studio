@@ -15,8 +15,7 @@ function repair(file) {
     console.log(`Repaired (UTF-16 BOM): ${file}`);
     return;
   }
-  // Heuristic: If it has lots of null bytes, it might be corrupted UTF-16 without BOM or just bad encoding
-  // Check if every second byte is a null byte (common in ASCII stored as UTF-16LE)
+ 
   let nulls = 0;
   for (let i = 1; i < Math.min(buf.length, 100); i += 2) {
     if (buf[i] === 0) nulls++;

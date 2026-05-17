@@ -13,7 +13,7 @@ export default async function UnauthorizedPage({ searchParams }: UnauthorizedPag
   return (
     <>
       <AppHeader role={session.role} />
-      <div id="main-content" className="mx-auto max-w-lg px-6 py-16 text-center">
+      <div id="main-content" role="main" className="mx-auto max-w-lg px-6 py-16 text-center">
         <h1 className="text-2xl font-bold">Access denied</h1>
         <p className="mt-4 text-muted-foreground">
           {reason === 'studio'

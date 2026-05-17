@@ -19,4 +19,3 @@ export function hasPermission(role: Role, permission: Permission): boolean {
   return map[role].includes(permission);
 }
 
-// Trigger re-evaluation after proxy rename

@@ -10,7 +10,7 @@ export default async function HomePage() {
   return (
     <>
       <AppHeader role={session.role} />
-      <div id="main-content" className="mx-auto max-w-3xl px-6 py-16">
+      <div id="main-content" role="main" className="mx-auto max-w-3xl px-6 py-16">
         <h1 className="text-3xl font-bold">Page Studio</h1>
         <p className="mt-4 text-lg text-muted-foreground">
           CMS-powered schema-driven landing pages with a WYSIWYG-lite studio, Redux drafts, and immutable semver releases.
